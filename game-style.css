@@ -1,0 +1,202 @@
+/* FONTS */
+@font-face {
+   font-family: Arnel;
+    src: url(FONTS/Arnel-Regular.otf);
+}
+
+@font-face {
+     font-family: Komika-Display;
+    src: url(FONTS/KMKDSPT_.ttf);
+}
+
+@font-face {
+   font-family: Helvetica;
+    src: url(FONTS/helveticanowtext-bold-demo.ttf);
+}
+
+/* GAME BOARD ELEMENTS */
+.game-board{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 740px;
+    width: 100%;
+    margin: 30px 0px 100px 0px;
+}
+
+.cluster-prompt{
+    color: #FFF;
+    text-align: center;
+    font-family: Komika-Display;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0px 0px 0px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.score{
+    color: #fddd2b;
+    font-family: Helvetica;
+    font-size: 32px;
+    margin: 10px 10px 10px 10px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.choice-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   /* center group */
+    align-items: flex-start;   /* align items from the top */
+    gap: 60px;                 /* spacing between each choice */
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+
+.choice-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* center everything horizontally */
+    text-align: center;        /* make sure text aligns center */
+    width: 240px;
+}
+
+.choice-btn{
+    width: 240px;
+    border: none;
+    background: none;
+}
+
+.choice-btn:hover{
+    transition-duration: 150ms;
+    transform: translateY(-1.00em);
+}
+
+.choice-btn:active{
+    transition-duration: 150ms;
+    transform: translateY(-0.50em);
+}
+
+.choice-text {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 16px;   /* space between icon and label */
+    margin-left: 100px;     /* remove the offset */
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+.choice-img {
+    display: block;
+    margin: 0 auto;            /* force horizontal centering */
+    width: 340px;              /* match button width */
+    height: auto;              /* keep proportions */
+    max-height: 340px;         /* optional: prevents it from being too tall */
+    object-fit: contain;       /* makes sure it scales inside */
+    margin-right: 100px;
+}
+
+/* TABLET MEDIA QUERIES */
+@media only screen and (max-width: 768px){
+    .game-board{
+        max-width: 450px;
+    }
+
+    .cluster-prompt{
+        font-size: 24px;
+        margin: 7px 0px 0px 0px;
+    }
+    
+    .choice-menu{
+        flex-direction: column;
+        width: 420px;
+    }
+    
+    .choice-details{
+        flex-direction: row;
+        align-items: center;
+        width: 420px;
+    }
+    
+    .choice-btn{
+        width: 210px;
+        border: none;
+        background: none;
+        margin: 10px;
+    }
+    
+    .choice-btn:hover{
+        transition-duration: 150ms;
+        transform: translateY(-1.00em);
+    }
+    
+    .choice-btn:active{
+        transition-duration: 150ms;
+        transform: translateY(-0.50em);
+    }
+    
+    .choice-text{
+        font-size: 16px;
+        margin: 0px 0px 0px 0px;
+        width: 200px;
+    }
+    
+    .choice-img{
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media only screen and (max-width: 428px){
+    .game-board{
+        max-width: 330px;
+    }
+
+    .cluster-prompt{
+        font-size: 24px;
+        margin: 7px 0px 0px 0px;
+    }
+    
+    .choice-menu{
+        flex-direction: column;
+        width: 330px;
+    }
+    
+    .choice-details{
+        flex-direction: row;
+        align-items: center;
+        width: 330px;
+        justify-content: space-between;
+    }
+    
+    .choice-btn{
+        width: 120px;
+        border: none;
+        background: none;
+        margin: 10px;
+    }
+    
+    .choice-btn:hover{
+        transition-duration: 150ms;
+        transform: translateY(-1.00em);
+    }
+    
+    .choice-btn:active{
+        transition-duration: 150ms;
+        transform: translateY(-0.50em);
+    }
+    
+    .choice-text{
+        font-size: 16px;
+        margin: 0px 0px 0px 0px;
+        width: 180px;
+    }
+    
+    .choice-img{
+        width: 170px;
+        height: 170px;
+    }
+}
